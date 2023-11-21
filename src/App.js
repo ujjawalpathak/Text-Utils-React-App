@@ -26,19 +26,18 @@ function App() {
       setDisplayMode("dark");
       document.body.style.backgroundColor = "#042743";
       showAlert("Dark Mode is enabled.", "success");
-      document.title = "TextUtils - Dark Mode";
-      setInterval(() => {
-        document.title = "Dark Mode Enabled";
-      }, 2000);
-      setInterval(() => {
-        document.title = "Install TextUtils";
-      }, 2000);
+      // document.title = "TextUtils - Dark Mode";
+      // setInterval(() => {
+      //   document.title = "Dark Mode Enabled";
+      // }, 2000);
+      // setInterval(() => {
+      //   document.title = "Install TextUtils";
+      // }, 2000);
     }else{
       setDisplayMode("light");
       document.body.style.backgroundColor = "white";
       showAlert("Light Mode is enabled.", "success");
-      document.title = "TextUtils - Light Mode";  
-
+      // document.title = "TextUtils - Light Mode";  
     }
   }
 
