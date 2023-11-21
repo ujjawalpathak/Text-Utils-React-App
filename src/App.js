@@ -26,19 +26,25 @@ function App() {
       setDisplayMode("dark");
       document.body.style.backgroundColor = "#042743";
       showAlert("Dark Mode is enabled.", "success");
-      document.title = "TextUtil - Dark Mode";
+      document.title = "TextUtils - Dark Mode";
+      setInterval(() => {
+        document.title = "Dark Mode Enabled";
+      }, 2000);
+      setInterval(() => {
+        document.title = "Install TextUtils";
+      }, 2000);
     }else{
       setDisplayMode("light");
       document.body.style.backgroundColor = "white";
       showAlert("Light Mode is enabled.", "success");
-      document.title = "TextUtil - Light Mode";  
+      document.title = "TextUtils - Light Mode";  
 
     }
   }
 
   return (
     <>
-      <Navbar title="TextUtils" displayMode={displayMode} toggleMode={toggleMode} homepage="Home" aboutpage="About"/>
+      <Navbar title="TextUtilss" displayMode={displayMode} toggleMode={toggleMode} homepage="Home" aboutpage="About"/>
       <Alerts alert={alert}/>
       <div className='container my-3'>
       <TextForm heading="Enter Your Text Below" displayMode={displayMode}/>
