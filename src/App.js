@@ -1,11 +1,10 @@
 
 import './App.css';
 import Alerts from './components/Alerts';
-import About from './components/About ';
+// import About from './components/About ';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
 
@@ -35,17 +34,25 @@ function App() {
   }
 
   return (
+    // <>
+    //   <Router>
+    //     <Navbar title="TextUtils" displayMode={displayMode} toggleMode={toggleMode} homepage="Home" aboutpage="About" />
+    //     <Alerts alert={alert} />
+    //     <div className='container my-3'>
+    //       <Routes>
+    //       <Route exact path="/" element={<TextForm heading="Enter Your Text Below" displayMode={displayMode} />} />
+    //       <Route exact path="/about" element={<About />} />
+    //       </Routes>
+    //     </div>
+    //   </Router>
+    // </>
+
     <>
-      <Router>
-        <Navbar title="TextUtils" displayMode={displayMode} toggleMode={toggleMode} homepage="Home" aboutpage="About" />
+        <Navbar title="TextUtils" displayMode={displayMode} toggleMode={toggleMode} homepage="Home" />
         <Alerts alert={alert} />
         <div className='container my-3'>
-          <Routes>
-          <Route exact path="/" element={<TextForm heading="Enter Your Text Below" displayMode={displayMode} />} />
-          <Route exact path="/about" element={<About />} />
-          </Routes>
+            <TextForm heading="Enter Your Text Below" displayMode={displayMode} />
         </div>
-      </Router>
     </>
   );
 }
